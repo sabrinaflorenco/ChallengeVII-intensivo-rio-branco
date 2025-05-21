@@ -4,7 +4,7 @@ import Header from "../components/Header";
 const ProductsPage = () => {
   const [sales, setSales] = useState([]);
   const [formData, setFormData] = useState({
-    tipoCurso: "online",
+    tipoCurso: "",
     nome: "",
     email: "",
     telefone: "",
@@ -72,12 +72,6 @@ const ProductsPage = () => {
 
   const [filtro, setFiltro] = useState({ tipoCurso: "", periodo: "" });
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prev) => ({ ...prev, [name]: value }));
-  // };
-  // Não precisa dessse handleChange, pois o valor do select já está sendo controlado pelo estado formData
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setSales((prev) => [...prev, { ...formData, id: Date.now() }]);
@@ -107,7 +101,7 @@ const ProductsPage = () => {
           onSubmit={handleSubmit}
           className="grid grid-cols-1 md:grid-cols-2 gap-4"
         >
-          {fields.map((field, index) => ( // Mapeando os campos do formulário
+          {fields.map((field, index) => ( /* Mapeando os campos do formulário*/
             <div key={index}>
               <label>{field.label}</label>
               <input
@@ -115,7 +109,7 @@ const ProductsPage = () => {
                 name={field.name}
                 value={field.value}
                 onChange={(e) =>
-                  setFormData({ ...formData, [field.name] : e.target.value }) //utilizando o valor do campo para atualizar o estado
+                  setFormData({ ...formData, [field.name] : e.target.value }) /*utilizando o valor do campo para atualizar o estado*/
                 }
                 className="w-full border p-2 rounded"
               />
@@ -131,7 +125,7 @@ const ProductsPage = () => {
             </button>
           </div>
         </form>
-        /* Filtros */
+        {/*Filtros*/}
         <div className="mt-10">
           <h2 className="text-xl font-semibold mb-4">Lista de Vendas</h2>
           <div className="flex gap-4 mb-4">
@@ -140,15 +134,15 @@ const ProductsPage = () => {
               onChange={(e) =>
                 setFiltro((f) => ({ ...f, tipoCurso: e.target.value }))
               }
-              className="border p-2 rounded"
+              className="border p-2 rounded bg-gray-700 text-white"
             >
               <option value="">Todos os Tipos</option>
               <option value="online">Online</option>
               <option value="presencial">Presencial</option>
             </select>
-            /* Filtro por período pode ser adicionado aqui */
+           { /* Filtro por período pode ser adicionado aqui */}
           </div>
-          /* Tabela de vendas */
+          {/* Tabela de vendas */}
           <table className="w-full border text-left">
             <thead>
               <tr className="bg-gray-100">
@@ -181,5 +175,3 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
-
-
