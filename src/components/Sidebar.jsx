@@ -20,7 +20,7 @@ const SIDEBAR_ITEMS = [
   },
   { name: "Sales Module", icon: ShoppingBag, color: "#8B5CF6", href: "/salesmodule" },
   { name: "Expenses", icon: DollarSign, color: "#10B981", href: "/expenses" },
-  { name: "Analytics", icon: TrendingUp, color: "#3B82F6", href: "/analytics" },
+
 ];
 
 const Sidebar = () => {
