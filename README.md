@@ -88,3 +88,54 @@ Vocês serão responsáveis por desenvolver **apenas o frontend** da aplicação
 
 ---
 
+
+ Parte 1 – README de Como Rodar o Projeto Localmente
+Este projeto é um sistema de cadastro e gerenciamento de vendas desenvolvido com React.
+
+## 🔧 Como rodar localmente
+
+1. **Clone o repositório ou baixe o .zip**  
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+
+   
+Acesse a pasta do projeto:
+
+cd seu-repositorio
+
+npm run dev
+
+http://localhost:5173
+
+💡 Requisitos:
+
+Node.js (versão recomendada: 18+)
+
+npm (ou yarn)
+
+
+Parte 2 – README do Projeto Frontend (Documentação Técnica)
+# 🚀 Codicash - Frontend
+
+O **Codicash** é uma aplicação frontend desenvolvida em React utilizando o Vite, com o objetivo de gerenciar e registrar vendas de forma simples, responsiva e intuitiva. Atualmente, o projeto funciona de forma local, sem integração com APIs externas ou backend, utilizando apenas armazenamento local (`localStorage`).
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Router DOM](https://reactrouter.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Lucide React](https://lucide.dev/)
+- [Recharts](https://recharts.org/)
+
+---
+
+
+
+
+
+
+
